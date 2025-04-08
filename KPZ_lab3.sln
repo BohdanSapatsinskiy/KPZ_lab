@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPZ_lab3", "KPZ_lab3.csproj", "{F2ECB4EE-BC46-49BF-ADDD-17BDF4D7CAF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2ECB4EE-BC46-49BF-ADDD-17BDF4D7CAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2ECB4EE-BC46-49BF-ADDD-17BDF4D7CAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2ECB4EE-BC46-49BF-ADDD-17BDF4D7CAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2ECB4EE-BC46-49BF-ADDD-17BDF4D7CAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {197BCF8C-396A-47BD-A2C3-7340DBE1D9B2}
+	EndGlobalSection
+EndGlobal
