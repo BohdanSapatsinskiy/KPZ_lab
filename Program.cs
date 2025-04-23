@@ -94,6 +94,8 @@ namespace KPZ_lab3
             Console.WriteLine();
             //Завдання 5
 
+            Console.WriteLine("Завдання 5");
+
             var h1Node = new LightElementNode("h1", false, false);
             h1Node.AddClass("tittle");
             var h1Text = new LightTextNode("Купити:");
@@ -114,21 +116,19 @@ namespace KPZ_lab3
                 divNode.AddChild(productNode);
             }
 
-            h1Node.AddEventListener("click", () => Console.WriteLine("Клік на h1!"));
-
-            divNode.AddEventListener("mouseover", () => Console.WriteLine("Наведено мишкою на div!"));
+            var imageNode1 = new LightImageNode("https://image.jpg", "Зображення з мережі");
+            var imageNode2 = new LightImageNode("images/local_image.jpg", "Локальне зображення");
 
             Console.WriteLine(h1Node.OuterHTML());
             Console.WriteLine(divNode.OuterHTML());
+            Console.WriteLine(imageNode1.OuterHTML());  
+            Console.WriteLine(imageNode2.OuterHTML());
 
             // Тестуємо події
             Console.WriteLine("\nТестування подій:");
-            h1Node.TriggerEvent("click"); 
+            h1Node.TriggerEvent("click");
             divNode.TriggerEvent("mouseover");
 
-
-            Console.WriteLine();
-            Console.WriteLine();
             //Завдання 6
             Console.WriteLine("Завдання 6");
 
