@@ -17,6 +17,8 @@ namespace KPZ_lab3.Composit
         public List<string> CssClasses { get; }
         public List<LightNode> Children { get; }
 
+        private Dictionary<string, Action> EventListeners { get; } = new Dictionary<string, Action>();
+
         public LightElementNode(string tagName, bool isBlock, bool isSelfClosing)
         {
             TagName = tagName;
@@ -34,6 +36,26 @@ namespace KPZ_lab3.Composit
         public void AddChild(LightNode child)
         {
             Children.Add(child);
+        }
+
+        public void AddEventListener(string eventName, Action callback)
+        {
+            if (!EventListeners.ContainsKey(eventName))
+            {
+                EventListeners[eventName] = callback;
+            }
+            else
+            {
+                EventListeners[eventName] += callback;
+            }
+        }
+
+        public void TriggerEvent(string eventName)
+        {
+            if (EventListeners.ContainsKey(eventName))
+            {
+                EventListeners[eventName]?.Invoke();
+            }
         }
 
         public override string OuterHTML()
@@ -61,5 +83,5 @@ namespace KPZ_lab3.Composit
             return string.Join("", innerContent);
         }
     }
-
 }
+

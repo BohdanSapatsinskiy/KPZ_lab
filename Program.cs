@@ -93,7 +93,6 @@ namespace KPZ_lab3
             Console.WriteLine();
             Console.WriteLine();
             //Завдання 5
-            Console.WriteLine("Завдання 5");
 
             var h1Node = new LightElementNode("h1", false, false);
             h1Node.AddClass("tittle");
@@ -115,8 +114,17 @@ namespace KPZ_lab3
                 divNode.AddChild(productNode);
             }
 
+            h1Node.AddEventListener("click", () => Console.WriteLine("Клік на h1!"));
+
+            divNode.AddEventListener("mouseover", () => Console.WriteLine("Наведено мишкою на div!"));
+
             Console.WriteLine(h1Node.OuterHTML());
             Console.WriteLine(divNode.OuterHTML());
+
+            // Тестуємо події
+            Console.WriteLine("\nТестування подій:");
+            h1Node.TriggerEvent("click"); 
+            divNode.TriggerEvent("mouseover");
 
 
             Console.WriteLine();
